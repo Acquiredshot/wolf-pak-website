@@ -39,7 +39,7 @@ const Contact = () => {
           
           <form action="https://formsubmit.co/codycodesit@pak-innovations.net" method="POST" className="mt-12 grid grid-cols-1 gap-y-6">
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="http://localhost:3000/#contact" /> {/* Update this to your production URL later */}
+            <input type="hidden" name="_next" value="https://www.wolf-pakinnovations.com/#contact" />
             
             <div>
               <label htmlFor="name" className="block text-xs font-bold text-cyan-500/70 uppercase tracking-widest">
