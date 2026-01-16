@@ -15,6 +15,27 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Wolf-Pak Innovations | Elite Cybersecurity & Infrastructure",
   description: "Deploying military-grade cybersecurity and next-gen digital infrastructure. Secure your future with Wolf-Pak Innovations.",
+  keywords: ["Cybersecurity", "Wolf-Pak", "Infrastructure", "Tech", "Security", "Web Development", "Defense", "Software Engineering", "IT Consulting", "Cloud Services"],
+  authors: [{ name: "Wolf-Pak Innovations" }],
+  creator: "Wolf-Pak Innovations",
+  openGraph: {
+    title: "Wolf-Pak Innovations | Elite Cybersecurity & Infrastructure",
+    description: "Deploying military-grade cybersecurity and next-gen digital infrastructure. Secure your future with Wolf-Pak Innovations.",
+    url: "https://www.wolf-pakinnovations.com",
+    siteName: "Wolf-Pak Innovations",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wolf-Pak Innovations",
+    description: "Deploying military-grade cybersecurity and next-gen digital infrastructure.",
+  },
+  viewport: "width=device-width, initial-scale=1",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
