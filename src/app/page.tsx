@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import LightningStorm from "@/components/LightningStorm";
 import GlowingEyes from "@/components/GlowingEyes";
 import TechOverlay from "@/components/TechOverlay";
+import Terminal from "@/components/Terminal";
+import StatusDashboard from "@/components/StatusDashboard";
 
 export default function Home() {
   return (
@@ -24,6 +26,9 @@ export default function Home() {
         <Contact />
         <Footer />
       </div>
+      {/* Floating Widgets */}
+      <Terminal />
+      <StatusDashboard />
     </div>
   );
 }
