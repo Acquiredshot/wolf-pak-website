@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -17,9 +17,9 @@ const Contact = () => {
           </p>
         </div>
         <div className="mt-12">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="flex justify-center">
              {/* Info Cards */}
-             <div className="group rounded-sm bg-slate-900/50 border border-slate-800 p-6 text-center hover:border-cyan-500/50 transition-colors duration-300 clip-corner">
+             <div className="group w-full max-w-sm rounded-sm bg-slate-900/50 border border-slate-800 p-6 text-center hover:border-cyan-500/50 transition-colors duration-300 clip-corner">
                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-none bg-slate-800 border border-slate-700 mb-4 text-cyan-500 group-hover:text-cyan-400 group-hover:shadow-[0_0_10px_#0ea5e9] transition-all">
                     <Mail className="h-5 w-5" />
                  </div>
@@ -27,13 +27,6 @@ const Contact = () => {
                  <p className="mt-2 text-sm text-cyan-500/80">
                    codycodesit@pak-innovations.net
                  </p>
-             </div>
-             <div className="group rounded-sm bg-slate-900/50 border border-slate-800 p-6 text-center hover:border-cyan-500/50 transition-colors duration-300 clip-corner">
-                 <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-none bg-slate-800 border border-slate-700 mb-4 text-cyan-500 group-hover:text-cyan-400 group-hover:shadow-[0_0_10px_#0ea5e9] transition-all">
-                    <Phone className="h-5 w-5" />
-                 </div>
-                 <h3 className="text-sm font-bold text-white uppercase tracking-wider">VOICE_LINK</h3>
-                 <p className="mt-2 text-sm text-cyan-500/80">+1 (555) 123-4567</p>
              </div>
           </div>
           
