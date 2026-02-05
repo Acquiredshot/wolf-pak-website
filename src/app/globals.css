@@ -7,6 +7,18 @@
   --accent-glow: rgba(14, 165, 233, 0.5);
 }
 
+/* Recon Mode (Infrared Thermal Vision) */
+.recon-mode {
+  filter: contrast(1.2) brightness(1.1) sepia(1) hue-rotate(-50deg) saturate(3);
+}
+
+/* Exclude media from inversion so they look normal */
+.recon-mode img, 
+.recon-mode video,
+.recon-mode .no-invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
