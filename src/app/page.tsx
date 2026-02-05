@@ -10,6 +10,7 @@ import GlowingEyes from "@/components/GlowingEyes";
 import TechOverlay from "@/components/TechOverlay";
 import Terminal from "@/components/Terminal";
 import StatusDashboard from "@/components/StatusDashboard";
+import OrbAssistant from "@/components/OrbAssistant";
 import ConsoleEasterEgg from "@/components/ConsoleEasterEgg";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -33,6 +34,7 @@ export default function Home() {
       {/* Floating Widgets */}
       <Terminal />
       <StatusDashboard />
+      <OrbAssistant />
     </div>
   );
 }
