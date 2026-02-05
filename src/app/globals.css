@@ -157,3 +157,48 @@ body {
   10%, 90% { opacity: 0.8; }
   50% { opacity: 1; }
 }
+
+/* MILO Terminal & Boot Sequence Styles */
+#terminal-container {
+  background: #050505;
+  color: #00f2ff; /* Cyber Cyan */
+  font-family: 'Courier New', monospace;
+  padding: 20px;
+  border: 1px solid #00f2ff;
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+#terminal-body {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+/* MILO visual entrance animation */
+#milo-visual {
+  text-align: center;
+  animation: glitch-appear 0.5s ease-in-out;
+}
+
+@keyframes glitch-appear {
+  0% { opacity: 0; transform: scale(0.9); filter: hue-rotate(90deg); }
+  50% { opacity: 0.5; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); filter: hue-rotate(0deg); }
+}
+
+.milo-glow {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #00f2ff 0%, transparent 70%);
+  margin: 0 auto;
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: milo-pulse 2s infinite;
+}
+
+@keyframes milo-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}

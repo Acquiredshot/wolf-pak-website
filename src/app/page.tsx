@@ -13,10 +13,12 @@ import StatusDashboard from "@/components/StatusDashboard";
 import OrbAssistant from "@/components/OrbAssistant";
 import ConsoleEasterEgg from "@/components/ConsoleEasterEgg";
 import ThemeToggle from "@/components/ThemeToggle";
+import MiloIntro from "@/components/MiloIntro";
 
 export default function Home() {
   return (
     <div className="min-h-screen relative text-white">
+      <MiloIntro />
       <ConsoleEasterEgg />
       <ThemeToggle />
       <LightningStorm />
