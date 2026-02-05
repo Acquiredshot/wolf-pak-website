@@ -27,6 +27,9 @@ const Contact = () => {
                  <p className="mt-2 text-sm text-cyan-500/80">
                    codycodesit@pak-innovations.net
                  </p>
+                 <p className="mt-1 text-sm text-cyan-500/80">
+                   elijah.f@pak-innovations.net
+                 </p>
              </div>
           </div>
           

@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import IndustrySolutions from "@/components/IndustrySolutions";
+import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LightningStorm from "@/components/LightningStorm";
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <Services />
         <IndustrySolutions />
+        <About />
         <Contact />
         <Footer />
       </div>
