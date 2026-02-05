@@ -25,7 +25,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:ml-6 md:flex md:space-x-8 md:items-center">
-            {['Services', 'About'].map((item) => (
+            {['Services', 'Solutions', 'About'].map((item) => (
               <Link 
                 key={item}
                 href={`#${item.toLowerCase()}`} 
@@ -58,7 +58,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-b border-cyan-900 absolute w-full z-50">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {['Services', 'About', 'Contact'].map((item) => (
+            {['Services', 'Solutions', 'About', 'Contact'].map((item) => (
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}

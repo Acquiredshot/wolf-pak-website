@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import IndustrySolutions from "@/components/IndustrySolutions";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LightningStorm from "@/components/LightningStorm";
@@ -17,6 +18,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Services />
+        <IndustrySolutions />
         <Contact />
         <Footer />
       </div>
