@@ -1,116 +1,115 @@
 import Link from 'next/link';
-import { ArrowRight, Cpu, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, Bot, BrainCircuit, Workflow } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden flex items-center min-h-[90vh]">
-      {/* Abstract Background Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-transparent to-slate-950/90"></div>
-      </div>
-
+    <div className="relative overflow-hidden flex items-center min-h-[90vh] pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <div className="inline-flex items-center px-4 py-2 border border-cyan-500/30 bg-cyan-950/10 backdrop-blur-sm mb-6 clip-corner">
-              <span className="flex h-2 w-2 bg-cyan-500 mr-2 animate-pulse shadow-[0_0_10px_#0ea5e9]"></span>
-              <span className="text-sm font-mono text-cyan-400 tracking-widest uppercase glow-text">System Online</span>
+            <div className="inline-flex items-center px-3 py-1.5 rounded-full border border-violet-200 bg-violet-100/60 backdrop-blur-sm mb-6">
+              <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
+              <span className="text-xs font-medium text-violet-700">Agents Active</span>
             </div>
             
-            <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-mono">
-              <span className="block mb-2 animate-glitch" style={{animationDelay: '2s'}}>PROTOCOL:</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">
-                DOMINANCE
+            <h1 className="text-4xl tracking-tight font-bold text-slate-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+              <span className="block mb-2 text-slate-800">Building</span>
+              <span className="block gradient-text">
+                Agentic Systems
               </span>
             </h1>
             
-            <p className="mt-3 text-base text-slate-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 font-light leading-relaxed font-sans border-l-2 border-cyan-900/50 pl-4">
-              Wolf-Pak Innovations LLC deploys military-grade cybersecurity and next-gen infrastructure. We engineer the digital fortress you need to survive the modern web.
+            <p className="mt-6 text-base text-slate-600 sm:text-lg sm:max-w-xl sm:mx-auto md:text-xl lg:mx-0 leading-relaxed">
+              Wolf-Pak Innovations builds autonomous AI agents and intelligent systems that think, adapt, and execute. We architect the agentic infrastructure powering the next era of technology.
             </p>
 
             <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <Link href="#contact" className="group relative w-full flex items-center justify-center px-8 py-3 border border-cyan-500 text-base font-bold text-black bg-cyan-500 hover:bg-cyan-400 md:py-4 md:text-lg transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.5)] clip-corner overflow-hidden">
-                  <span className="relative z-10 flex items-center">INITIATE <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" /></span>
-                  <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/contact" className="group inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 rounded-lg transition-all duration-200 shadow-lg shadow-violet-500/25">
+                  Get Started <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
-                <Link href="#services" className="w-full flex items-center justify-center px-8 py-3 border border-slate-700 text-base font-medium text-cyan-300 bg-black/50 hover:bg-slate-900 hover:border-cyan-500/50 md:py-4 md:text-lg backdrop-blur-sm transition-all duration-300 clip-corner">
-                  SCAN SERVICES
+                <Link href="/services" className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-slate-700 bg-white/70 border border-violet-200 hover:bg-white hover:border-violet-300 rounded-lg transition-all duration-200">
+                  Explore Services
                 </Link>
               </div>
             </div>
             
-            <div className="mt-8 border-t border-slate-800 pt-6 flex justify-between items-center sm:max-w-lg sm:mx-auto lg:mx-0 text-slate-500 text-sm font-mono">
+            <div className="mt-10 pt-8 border-t border-violet-200/60 flex gap-8 sm:max-w-lg sm:mx-auto lg:mx-0 text-slate-500 text-sm">
                <div className="flex items-center gap-2">
-                  <ShieldCheck className="h-4 w-4 text-cyan-500" />
-                  <span>SECURE_CONN</span>
+                  <Bot className="h-4 w-4 text-cyan-600" />
+                  <span>Autonomous</span>
                </div>
                <div className="flex items-center gap-2">
-                  <Zap className="h-4 w-4 text-cyan-500" />
-                  <span>LATENCY: LOW</span>
+                  <Workflow className="h-4 w-4 text-violet-600" />
+                  <span>Orchestrated</span>
                </div>
                <div className="flex items-center gap-2">
-                  <Cpu className="h-4 w-4 text-cyan-500" />
-                  <span>OPTIMIZED</span>
+                  <BrainCircuit className="h-4 w-4 text-fuchsia-600" />
+                  <span>Intelligent</span>
                </div>
             </div>
           </div>
 
-          {/* Right Side Tech Graphic */}
-          <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+          {/* Right Side — Agent Dashboard Card */}
+          <div className="mt-16 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
              <div className="relative mx-auto w-full lg:max-w-md">
-                {/* Holographic Card Container */}
-                <div className="relative block w-full bg-slate-950/80 rounded-sm tech-border p-8 overflow-hidden group">
+                <div className="relative block w-full glass-card p-6 overflow-hidden group">
                    
-                   {/* Scanning Line Animation */}
-                   <div className="absolute top-0 left-0 w-full h-1 bg-cyan-500/50 shadow-[0_0_15px_#0ea5e9] animate-[scan_4s_linear_infinite]"></div>
-                   
-                   <div className="space-y-6 relative z-10 font-mono">
-                      <div className="flex items-center justify-between border-b border-cyan-900/50 pb-4">
+                   <div className="space-y-5 relative z-10">
+                      <div className="flex items-center justify-between border-b border-violet-200/60 pb-4">
                          <div className="flex items-center space-x-3">
-                            <div className="h-10 w-10 bg-cyan-950 border border-cyan-700 flex items-center justify-center">
-                               <span className="text-cyan-400 font-bold text-xl">W</span>
+                            <div className="h-9 w-9 bg-violet-100 border border-violet-200 rounded-lg flex items-center justify-center">
+                               <span className="text-cyan-600 font-bold text-lg">W</span>
                             </div>
-                            <div className="text-xs text-cyan-700">
-                               <div>ID: WOLF-PAK</div>
-                               <div>CLASS: ALPHA</div>
+                            <div className="text-xs text-slate-500">
+                               <div className="font-medium text-slate-800">Wolf-Pak</div>
+                               <div>Agent Platform</div>
                             </div>
                          </div>
-                         <div className="text-xs text-green-500 animate-pulse">● LIVE</div>
+                         <div className="flex items-center gap-1.5 text-xs text-emerald-600">
+                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Live
+                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                         <div className="flex justify-between text-xs text-slate-500">
-                           <span>ENCRYPTION</span>
-                           <span className="text-cyan-400">2048-BIT</span>
+                      <div className="space-y-3">
+                         <div className="flex justify-between text-xs">
+                           <span className="text-slate-500">Agent Uptime</span>
+                           <span className="text-slate-800 font-medium">99.97%</span>
                          </div>
-                         <div className="h-1 w-full bg-slate-900 rounded-full overflow-hidden">
-                           <div className="h-full bg-cyan-600 w-[98%] shadow-[0_0_10px_#0ea5e9]"></div>
+                         <div className="h-1.5 w-full bg-slate-200 rounded-full overflow-hidden">
+                           <div className="h-full bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full w-[98%]"></div>
                          </div>
                          
-                         <div className="flex justify-between text-xs text-slate-500 pt-2">
-                           <span>THREAT LEVEL</span>
-                           <span className="text-green-400">MINIMAL</span>
+                         <div className="flex justify-between text-xs pt-1">
+                           <span className="text-slate-500">Task Queue</span>
+                           <span className="text-emerald-600 font-medium">Nominal</span>
                          </div>
-                         <div className="h-1 w-full bg-slate-900 rounded-full overflow-hidden">
-                           <div className="h-full bg-green-600 w-[12%]"></div>
+                         <div className="h-1.5 w-full bg-slate-200 rounded-full overflow-hidden">
+                           <div className="h-full bg-emerald-500 rounded-full w-[12%]"></div>
                          </div>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-4 pt-4">
-                         <div className="h-24 bg-slate-900/50 border border-slate-800 p-3 flex flex-col justify-between hover:border-cyan-500/40 transition-colors">
-                            <span className="text-[10px] text-slate-600">CPU LOAD</span>
+                      <div className="grid grid-cols-2 gap-3 pt-2">
+                         <div className="h-24 glass-card !rounded-lg p-3 flex flex-col justify-between">
+                            <span className="text-[10px] text-slate-500 font-medium">Agent Load</span>
                             <div className="flex items-end space-x-1 h-10">
                                {[40, 70, 45, 90, 60, 80].map((h, i) => (
-                                 <div key={i} className="flex-1 bg-cyan-900/40 hover:bg-cyan-500 transition-colors" style={{height: `${h}%`}}></div>
+                                 <div key={i} className="flex-1 bg-violet-200 rounded-sm hover:bg-violet-300 transition-colors" style={{height: `${h}%`}}></div>
                                ))}
                             </div>
                          </div>
-                         <div className="h-24 bg-slate-900/50 border border-slate-800 p-3 flex flex-col justify-between hover:border-cyan-500/40 transition-colors">
-                            <span className="text-[10px] text-slate-600">NET TRAFFIC</span>
+                         <div className="h-24 glass-card !rounded-lg p-3 flex flex-col justify-between">
+                            <span className="text-[10px] text-slate-500 font-medium">Task Flow</span>
                             <div className="relative h-10 w-full overflow-hidden">
                                <svg className="absolute bottom-0 left-0 w-full h-full" preserveAspectRatio="none">
-                                 <path d="M0,40 L10,35 L20,38 L30,20 L40,25 L50,10 L60,15 L70,5 L80,10 L90,0 L100,5" fill="none" stroke="#0ea5e9" strokeWidth="2" className="drop-shadow-[0_0_5px_#0ea5e9]" />
+                                 <path d="M0,40 L10,35 L20,38 L30,20 L40,25 L50,10 L60,15 L70,5 L80,10 L90,0 L100,5" fill="none" stroke="url(#gradient)" strokeWidth="2" strokeLinecap="round" />
+                                 <defs>
+                                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                     <stop offset="0%" stopColor="#06b6d4" />
+                                     <stop offset="100%" stopColor="#8b5cf6" />
+                                   </linearGradient>
+                                 </defs>
                                </svg>
                             </div>
                          </div>
