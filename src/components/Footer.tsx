@@ -39,7 +39,7 @@ const Footer = () => {
                 <span className="sr-only">Instagram</span>
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-slate-400 hover:text-slate-900 transition-colors">
+              <Link href="https://www.facebook.com/profile.php?id=61574394741744" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors">
                 <span className="sr-only">Facebook</span>
                 <Facebook className="h-5 w-5" />
               </Link>
