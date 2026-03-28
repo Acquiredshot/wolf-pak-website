@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Cpu, Linkedin, Twitter } from 'lucide-react';
+import { Cpu, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -34,6 +34,20 @@ const Footer = () => {
               <Link href="#" className="text-slate-400 hover:text-slate-900 transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="h-5 w-5" />
+              </Link>
+              <Link href="https://www.instagram.com/wolfpak_innovations?igsh=d2JjYnVrOXNpaWc4&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors">
+                <span className="sr-only">Instagram</span>
+                <Instagram className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="text-slate-400 hover:text-slate-900 transition-colors">
+                <span className="sr-only">Facebook</span>
+                <Facebook className="h-5 w-5" />
+              </Link>
+              <Link href="https://www.tiktok.com/@wolfpakinnovations" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors">
+                <span className="sr-only">TikTok</span>
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.28 8.28 0 005.58 2.15v-3.44a4.85 4.85 0 01-3.77-1.25V6.69h3.77z" />
+                </svg>
               </Link>
             </div>
           </div>
