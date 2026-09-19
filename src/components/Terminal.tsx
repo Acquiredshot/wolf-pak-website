@@ -7,7 +7,7 @@ const Terminal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
   const [history, setHistory] = useState<{cmd: string, output: string}[]>([
-    { cmd: 'init', output: 'Wolf-Pak Terminal v2.0. Type "help" for available commands.' }
+    { cmd: 'init', output: 'Wolf-Pak Terminal v3.0 — Mk III HUD online. Type "help" for available commands.' }
   ]);
   const inputRef = useRef<HTMLInputElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -62,7 +62,7 @@ const Terminal = () => {
       {/* Toggle */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-8 right-4 md:right-8 z-50 p-2.5 rounded-full border transition-all ${isOpen ? 'bg-slate-900 border-violet-400/30 text-violet-400' : 'bg-white border-violet-200 text-slate-400 hover:text-slate-900 hover:border-violet-300 shadow-sm'}`}
+        className={`fixed bottom-8 right-4 md:right-8 z-50 p-2.5 rounded-full border transition-all ${isOpen ? 'bg-slate-900 border-cyan-400/40 text-cyan-400' : 'bg-slate-950/80 border-white/10 text-slate-500 hover:text-amber-400 hover:border-amber-400/30 shadow-sm'}`}
       >
         {isOpen ? <X className="w-5 h-5" /> : <TerminalIcon className="w-5 h-5" />}
       </button>
@@ -70,16 +70,16 @@ const Terminal = () => {
       {/* Terminal Window */}
       <div 
         className={`fixed bottom-20 right-4 md:right-8 w-[95vw] md:w-[460px] rounded-2xl shadow-2xl z-40 transition-all duration-200 origin-bottom-right overflow-hidden flex flex-col border border-slate-700/50 ${isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-95 opacity-0 translate-y-4 pointer-events-none'}`}
-        style={{ height: '280px', background: 'rgba(15, 23, 42, 0.95)', backdropFilter: 'blur(16px)' }}
+        style={{ height: '280px', background: 'rgba(10, 11, 15, 0.95)', backdropFilter: 'blur(16px)' }}
       >
         {/* Header */}
         <div className="px-4 py-2.5 border-b border-white/10 flex items-center justify-between">
            <div className="flex items-center gap-2">
-             <div className="w-2.5 h-2.5 rounded-full bg-red-500/60"></div>
-             <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></div>
-             <div className="w-2.5 h-2.5 rounded-full bg-green-500/60"></div>
+             <div className="w-2.5 h-2.5 rounded-full bg-red-500/70"></div>
+             <div className="w-2.5 h-2.5 rounded-full bg-amber-400/70"></div>
+             <div className="w-2.5 h-2.5 rounded-full bg-cyan-400/70"></div>
            </div>
-           <div className="text-xs text-slate-400 font-mono">terminal</div>
+           <div className="text-xs text-slate-500 font-mono">wolf-pak://terminal</div>
         </div>
 
         {/* Content */}

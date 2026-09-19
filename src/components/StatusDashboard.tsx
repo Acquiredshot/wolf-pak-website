@@ -27,14 +27,16 @@ const StatusDashboard = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 md:right-auto md:bottom-8 md:left-8 z-40 p-4 md:p-0 pointer-events-none select-none">
-      <div className="glass-card p-3 w-full md:w-56 pointer-events-auto">
-        
+      <div className="glass-card p-3 w-full md:w-56 pointer-events-auto relative">
+        <span className="hud-corner tl"></span>
+        <span className="hud-corner br"></span>
+
         {/* Header */}
-        <div className="flex items-center justify-between mb-3 pb-2 border-b border-violet-200/60">
-          <span className="text-xs font-medium text-slate-700 flex items-center gap-2">
+        <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
+          <span className="text-xs font-mono font-medium uppercase tracking-wide text-slate-300 flex items-center gap-2">
             <span className="relative flex h-1.5 w-1.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
             </span>
             Online
           </span>
@@ -47,7 +49,7 @@ const StatusDashboard = () => {
               <Wifi className="w-3 h-3" />
               <span>Latency</span>
             </div>
-            <div className={`text-base font-semibold font-mono ${latency > 50 ? 'text-amber-600' : 'text-slate-900'}`}>
+            <div className={`text-base font-semibold font-mono ${latency > 50 ? 'text-amber-400' : 'text-white'}`}>
               {latency}ms
             </div>
           </div>
@@ -57,7 +59,7 @@ const StatusDashboard = () => {
               <Server className="w-3 h-3" />
               <span>Load</span>
             </div>
-            <div className={`text-base font-semibold font-mono ${load > 80 ? 'text-red-600' : 'text-slate-900'}`}>
+            <div className={`text-base font-semibold font-mono ${load > 80 ? 'text-red-400' : 'text-white'}`}>
               {load}%
             </div>
           </div>

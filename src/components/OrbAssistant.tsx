@@ -28,11 +28,11 @@ const OrbAssistant = () => {
   const processCommand = async (text: string) => {
     setIsProcessing(true);
     const lowerText = text.toLowerCase();
-    
+
     await new Promise(resolve => setTimeout(resolve, 800));
 
     let response = '';
-    
+
     if (lowerText.includes('hello') || lowerText.includes('hi')) {
       response = "Hey there! What can I help you with?";
     } else if (lowerText.includes('who are you') || lowerText.includes('identity')) {
@@ -53,11 +53,11 @@ const OrbAssistant = () => {
 
   const handleSend = () => {
     if (!input.trim()) return;
-    
+
     const userText = input;
     setMessages(prev => [...prev, { role: 'user', text: userText }]);
     setInput('');
-    
+
     processCommand(userText);
   };
 
@@ -67,22 +67,24 @@ const OrbAssistant = () => {
 
   return (
     <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center">
-      
+
       {/* Chat Panel */}
-      <div 
-        className={`glass-card mb-6 w-[90vw] md:w-[380px] overflow-hidden transition-all duration-300 origin-bottom ${
-          isOpen 
-            ? 'opacity-100 scale-100 pointer-events-auto max-h-[500px]' 
+      <div
+        className={`glass-card mb-6 w-[90vw] md:w-[380px] overflow-hidden transition-all duration-300 origin-bottom relative ${
+          isOpen
+            ? 'opacity-100 scale-100 pointer-events-auto max-h-[500px]'
             : 'opacity-0 scale-95 pointer-events-none max-h-0'
         }`}
       >
+        <span className="hud-corner tl"></span>
+        <span className="hud-corner tr"></span>
         {/* Header */}
-        <div className="px-4 py-3 border-b border-violet-200/60 flex justify-between items-center">
+        <div className="px-4 py-3 border-b border-white/10 flex justify-between items-center">
             <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-violet-600" />
-                <span className="text-sm font-medium text-slate-900">Wolf-Pak Assistant</span>
+                <Sparkles className="w-4 h-4 text-amber-400" />
+                <span className="text-sm font-medium text-white">Wolf-Pak Assistant</span>
             </div>
-            <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-slate-900 transition-colors">
+            <button onClick={() => setIsOpen(false)} className="text-slate-500 hover:text-white transition-colors">
               <X className="w-4 h-4" />
             </button>
         </div>
@@ -92,9 +94,9 @@ const OrbAssistant = () => {
             {messages.map((msg, idx) => (
                 <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div className={`max-w-[85%] text-sm p-3 rounded-xl leading-relaxed ${
-                        msg.role === 'user' 
-                        ? 'bg-violet-100 text-slate-900 border border-violet-200 rounded-tr-sm' 
-                        : 'bg-white/80 text-slate-700 border border-violet-200/60 rounded-tl-sm'
+                        msg.role === 'user'
+                        ? 'bg-amber-500/10 text-white border border-amber-400/25 rounded-tr-sm'
+                        : 'bg-white/5 text-slate-300 border border-white/10 rounded-tl-sm'
                     }`}>
                         {msg.text}
                     </div>
@@ -102,9 +104,9 @@ const OrbAssistant = () => {
             ))}
             {isProcessing && (
                 <div className="flex justify-start">
-                    <div className="bg-white/80 text-slate-500 text-sm p-3 rounded-xl border border-violet-200/60 rounded-tl-sm">
+                    <div className="bg-white/5 text-slate-500 text-sm p-3 rounded-xl border border-white/10 rounded-tl-sm">
                       <div className="flex gap-1">
-                        {[0,1,2].map(i => <div key={i} className="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse" style={{animationDelay: `${i*150}ms`}} />)}
+                        {[0,1,2].map(i => <div key={i} className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" style={{animationDelay: `${i*150}ms`}} />)}
                       </div>
                     </div>
                 </div>
@@ -113,18 +115,18 @@ const OrbAssistant = () => {
         </div>
 
         {/* Input */}
-        <div className="p-3 border-t border-violet-200/60 flex gap-2">
-            <input 
-                type="text" 
+        <div className="p-3 border-t border-white/10 flex gap-2">
+            <input
+                type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Ask a question..."
-                className="flex-1 bg-white/80 border border-violet-200 rounded-lg px-3 py-2 text-sm text-slate-900 focus:border-violet-500 focus:outline-none transition-colors placeholder-slate-400"
+                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-cyan-400 focus:outline-none transition-colors placeholder-slate-600"
             />
-            <button 
+            <button
                 onClick={handleSend}
-                className="bg-violet-100 hover:bg-violet-200 text-violet-600 p-2 rounded-lg border border-violet-200 transition-colors"
+                className="bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 p-2 rounded-lg border border-amber-400/25 transition-colors"
             >
                 <Send className="w-4 h-4" />
             </button>
@@ -132,12 +134,12 @@ const OrbAssistant = () => {
       </div>
 
       {/* Trigger Button */}
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="relative group"
       >
-        <div className="h-12 w-12 rounded-full bg-white border border-violet-200 flex items-center justify-center shadow-lg hover:border-violet-300 transition-all">
-          <MessageCircle className={`w-5 h-5 transition-colors ${isOpen ? 'text-violet-600' : 'text-slate-400 group-hover:text-slate-900'}`} />
+        <div className="h-12 w-12 rounded-full bg-slate-950/80 border border-white/10 flex items-center justify-center shadow-lg hover:border-amber-400/40 transition-all">
+          <MessageCircle className={`w-5 h-5 transition-colors ${isOpen ? 'text-amber-400' : 'text-slate-500 group-hover:text-white'}`} />
         </div>
       </button>
 

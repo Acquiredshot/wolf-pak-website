@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f0f4ff;
-  --foreground: #0f172a;
-  --accent: #0891b2;
-  --accent-secondary: #7c3aed;
+  --background: #0a0b0f;
+  --foreground: #e7ecf3;
+  --accent: #e8a33d;
+  --accent-secondary: #ff3b3b;
+  --accent-cyan: #3ecfff;
 }
 
 /* Orb / Float Animations */
@@ -50,6 +51,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-rajdhani);
 }
 
 body {
@@ -70,44 +72,63 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.25);
+  background: rgba(232, 163, 61, 0.35);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 0.4);
+  background: rgba(232, 163, 61, 0.55);
+}
+
+::selection {
+  background: rgba(255, 59, 59, 0.55);
+  color: #0a0b0f;
 }
 
 /* Subtle text glow for headings */
 .glow-text {
-  text-shadow: 0 0 40px rgba(6, 182, 212, 0.15), 0 0 80px rgba(139, 92, 246, 0.08);
+  text-shadow: 0 0 40px rgba(232, 163, 61, 0.18), 0 0 80px rgba(255, 59, 59, 0.1);
 }
 
-/* Glass card base — vibrant */
+/* Glass card base — dark HUD panel */
 .glass-card {
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(139, 92, 246, 0.12);
+  background: rgba(16, 19, 26, 0.72);
+  border: 1px solid rgba(62, 207, 255, 0.16);
   backdrop-filter: blur(16px);
   border-radius: 16px;
   transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.8);
-  border-color: rgba(139, 92, 246, 0.25);
-  box-shadow: 0 4px 24px rgba(139, 92, 246, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  background: rgba(16, 19, 26, 0.85);
+  border-color: rgba(62, 207, 255, 0.32);
+  box-shadow: 0 4px 28px rgba(232, 163, 61, 0.08), 0 1px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* HUD corner brackets — add as absolutely-positioned children of a
+   `position: relative` panel: <span class="hud-corner tl" /> etc. */
+.hud-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+.hud-corner.tl { top: -1px; left: -1px; border-top: 2px solid var(--accent-cyan); border-left: 2px solid var(--accent-cyan); }
+.hud-corner.tr { top: -1px; right: -1px; border-top: 2px solid var(--accent-cyan); border-right: 2px solid var(--accent-cyan); }
+.hud-corner.bl { bottom: -1px; left: -1px; border-bottom: 2px solid var(--accent-cyan); border-left: 2px solid var(--accent-cyan); }
+.hud-corner.br { bottom: -1px; right: -1px; border-bottom: 2px solid var(--accent-cyan); border-right: 2px solid var(--accent-cyan); }
 
 /* Dot grid background */
 .dot-grid {
-  background-image: radial-gradient(circle, rgba(139, 92, 246, 0.07) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(circle, rgba(62, 207, 255, 0.14) 1px, transparent 1px);
+  background-size: 26px 26px;
 }
 
-/* Gradient text utility — vibrant */
+/* Gradient text utility — arc reactor gold to red */
 .gradient-text {
-  background: linear-gradient(135deg, #0891b2, #7c3aed, #db2777);
+  background: linear-gradient(100deg, #f2c14e, #e8a33d, #ff3b3b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -115,7 +136,7 @@ body {
 
 /* Vibrant section divider */
 .section-divider {
-  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.3), rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(232, 163, 61, 0.35), rgba(255, 59, 59, 0.25), transparent);
   height: 1px;
 }
 

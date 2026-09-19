@@ -12,35 +12,35 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full z-50 transition-all duration-300 backdrop-blur-xl bg-white/80 border-b border-violet-200/60">
+    <nav className="fixed w-full z-50 transition-all duration-300 backdrop-blur-xl bg-slate-950/80 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center gap-3 group">
-              <Cpu className="h-7 w-7 text-violet-600 group-hover:text-cyan-600 transition-colors" />
-              <span className="font-semibold text-lg text-slate-900 tracking-wide">Wolf-Pak</span>
+              <Cpu className="h-7 w-7 text-amber-400 group-hover:text-red-400 transition-colors" />
+              <span className="font-heading font-semibold text-lg text-white uppercase tracking-wide">Wolf-Pak</span>
             </Link>
           </div>
           <div className="hidden md:ml-6 md:flex md:space-x-1 md:items-center">
-            <Link 
-              href="/services" 
-              className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-violet-50"
+            <Link
+              href="/services"
+              className="text-slate-400 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-white/5"
             >
               Services
             </Link>
-            <Link 
-              href="/services#solutions" 
-              className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-violet-50"
+            <Link
+              href="/services#solutions"
+              className="text-slate-400 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-white/5"
             >
               Solutions
             </Link>
-            <Link 
-              href="/services#about" 
-              className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-violet-50"
+            <Link
+              href="/services#about"
+              className="text-slate-400 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-white/5"
             >
               About
             </Link>
-            <Link href="/contact" className="ml-4 inline-flex items-center justify-center px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-cyan-500 to-violet-500 rounded-lg hover:from-cyan-400 hover:to-violet-400 transition-all duration-200 shadow-lg shadow-violet-500/20">
+            <Link href="/contact" className="ml-4 inline-flex items-center justify-center px-5 py-2 text-sm font-medium text-slate-950 bg-gradient-to-r from-amber-400 to-red-500 rounded-lg hover:from-amber-300 hover:to-red-400 transition-all duration-200 shadow-lg shadow-red-500/20">
               Contact
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
@@ -49,7 +49,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-violet-50 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
@@ -59,7 +59,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-b border-violet-200/60 absolute w-full z-50">
+        <div className="md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-white/10 absolute w-full z-50">
           <div className="px-4 pt-2 pb-3 space-y-1">
             {[
               { label: 'Services', href: '/services' },
@@ -70,7 +70,7 @@ const Navbar = () => {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-slate-600 hover:text-slate-900 hover:bg-violet-50 block px-3 py-3 text-sm font-medium rounded-lg transition-colors"
+                className="text-slate-400 hover:text-white hover:bg-white/5 block px-3 py-3 text-sm font-medium rounded-lg transition-colors"
                 onClick={toggleMenu}
               >
                 {item.label}
