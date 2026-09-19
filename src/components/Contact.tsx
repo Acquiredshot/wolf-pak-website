@@ -23,15 +23,15 @@ const Contact = () => {
                  </div>
                  <h3 className="text-sm font-medium text-white">Email us</h3>
                  <p className="mt-2 text-sm text-slate-400">
-                   codycodesit@pak-innovations.net
+                   codycodesit@outlook.com
                  </p>
                  <p className="mt-1 text-sm text-slate-400">
-                   elijah.f@pak-innovations.net
+                   elijahforte10@gmail.com
                  </p>
              </div>
           </div>
 
-          <form action="https://formsubmit.co/codycodesit@pak-innovations.net" method="POST" className="mt-12 grid grid-cols-1 gap-y-5">
+          <form action="https://formsubmit.co/codycodesit@outlook.com" method="POST" className="mt-12 grid grid-cols-1 gap-y-5">
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://www.wolf-pakinnovations.com/contact" />
 

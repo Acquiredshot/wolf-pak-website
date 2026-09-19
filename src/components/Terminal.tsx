@@ -34,7 +34,7 @@ const Terminal = () => {
         output = 'Active Services:\n  Agent Architecture\n  Multi-Agent Orchestration\n  LLM Integration\n  Agentic Development';
         break;
       case 'contact':
-        output = 'Email: codycodesit@pak-innovations.net\n       elijah.f@pak-innovations.net';
+        output = 'Email: codycodesit@outlook.com\n       elijahforte10@gmail.com';
         break;
       case 'clear':
         setHistory([]);

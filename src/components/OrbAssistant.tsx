@@ -40,7 +40,7 @@ const OrbAssistant = () => {
     } else if (lowerText.includes('service') || lowerText.includes('offer')) {
       response = "We build autonomous AI agents, multi-agent systems, LLM integrations, and full-stack agentic applications. Check out the Services section for details!";
     } else if (lowerText.includes('contact') || lowerText.includes('email')) {
-      response = "You can reach us at codycodesit@pak-innovations.net or elijah.f@pak-innovations.net — or use the contact form below.";
+      response = "You can reach us at codycodesit@outlook.com or elijahforte10@gmail.com — or use the contact form below.";
     } else if (lowerText.includes('mission') || lowerText.includes('about')) {
       response = "We design, build, and deploy autonomous agent systems that reason, plan, and act. We're building the future of intelligent automation.";
     } else {
